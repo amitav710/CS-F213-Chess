@@ -66,13 +66,4 @@ public abstract class Square {
     public boolean equals(Square square) {
         return this.rank == square.rank && this.file == square.file;
     }
-
-    public Square clone() {
-        Piece squarePiece = null;
-
-        if (this instanceof OccupiedSquare)
-            squarePiece = ((OccupiedSquare) this).piece;
-
-        return createSquare(this.rank, this.file, squarePiece);
-    }
 }
